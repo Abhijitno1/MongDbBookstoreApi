@@ -2,7 +2,7 @@
 using MongoDB.Bson.Serialization.Attributes;
 using System.Text.Json.Serialization;
 
-namespace MongDbBookstoreApi.Models
+namespace MongoDbBookstoreApi.Models
 {
     public class Book
     {

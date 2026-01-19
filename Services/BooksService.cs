@@ -1,8 +1,9 @@
 ﻿using Microsoft.Extensions.Options;
-using MongDbBookstoreApi.Models;
+using MongoDbBookstoreApi.Models;
 using MongoDB.Driver;
+using MongoDbBookstoreApi.Models;
 
-namespace MongDbBookstoreApi.Services;
+namespace MongoDbBookstoreApi.Services;
 
 public class BooksService
 {

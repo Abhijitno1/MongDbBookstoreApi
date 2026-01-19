@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MongDbBookstoreApi.Models;
-using MongDbBookstoreApi.Services;
+using MongoDbBookstoreApi.Services;
+using MongoDbBookstoreApi.Models;
 
-namespace MongDbBookstoreApi.Controllers;
+namespace MongoDbBookstoreApi.Controllers;
 
 
 [ApiController]

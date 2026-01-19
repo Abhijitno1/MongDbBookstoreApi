@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36908.2 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongDbBookstoreApi", "MongDbBookstoreApi.csproj", "{20FC3104-0700-47F3-B208-BD42A08BCC47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDbBookstoreApi", "MongoDbBookstoreApi.csproj", "{20FC3104-0700-47F3-B208-BD42A08BCC47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

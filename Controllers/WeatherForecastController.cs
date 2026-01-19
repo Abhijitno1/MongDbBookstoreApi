@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace MongDbBookstoreApi.Controllers
+namespace MongoDbBookstoreApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]

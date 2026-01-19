@@ -1,4 +1,4 @@
-namespace MongDbBookstoreApi
+namespace MongoDbBookstoreApi
 {
     public class WeatherForecast
     {

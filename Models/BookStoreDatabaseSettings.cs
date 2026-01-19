@@ -1,4 +1,4 @@
-﻿namespace MongDbBookstoreApi.Models;
+﻿namespace MongoDbBookstoreApi.Models;
 
 public class BookStoreDatabaseSettings
 {
