@@ -9,6 +9,20 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<BookStoreDatabaseSettings>(
     builder.Configuration.GetSection("BookStoreDatabase"));
 builder.Services.AddSingleton<BooksService>();
+builder.Services.AddScoped<IMediaRepository, MongoMediaRepository>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                // EXTREMELY IMPORTANT: Expose this header so JS can read the filename
+                .WithExposedHeaders("Content-Disposition");
+        });
+});
 
 builder.Services.AddControllers()
     .AddJsonOptions(
@@ -18,6 +32,13 @@ builder.Services.AddControllers()
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+
+app.UseStaticFiles();
+
+// 2. MIDDLEWARE ORDER IS CRITICAL
+app.UseRouting(); // First: Resolve the endpoint
+
+app.UseCors("AllowAll"); // Second: Apply CORS before Auth/Endpoint
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
