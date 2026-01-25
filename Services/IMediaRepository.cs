@@ -6,5 +6,7 @@ namespace MongoDbBookstoreApi.Services
     {
         Task<string> UpsertAsync(MediaFile media);
         Task<MediaFile?> GetByIdAsync(string id);
+        Task<IEnumerable<MediaFileDto>> GetAllMediaAsync();
+        Task DeleteMediaAsync(string id);
     }
 }

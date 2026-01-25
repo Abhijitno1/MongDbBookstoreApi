@@ -55,5 +55,19 @@ namespace MongoDbBookstoreApi.Controllers
             if (media == null) return NotFound();
             return File(media.Data, media.ContentType, media.FileName);
         }
+
+        [HttpGet("list")]
+        public async Task<IActionResult> List()
+        {
+            var mediaList = await _repo.GetAllMediaAsync();
+            return Ok(mediaList);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(string id)
+        {
+            await _repo.DeleteMediaAsync(id);
+            return NoContent();
+        }
     }
 }
